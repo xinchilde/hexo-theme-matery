@@ -1,0 +1,52 @@
+<!-- 自定义插件-->
+<script type="text/javascript">
+		var OriginTitile = document.title,
+			st;
+		document.addEventListener("visibilitychange", function () {
+			document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+				"(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+					document.title = OriginTitile
+				}, 3e3))
+		})
+	</script>
+
+
+<!-- 鼠标点击烟花爆炸效果 -->
+<% if (theme.fireworks.enable) { %>
+	<canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;"></canvas>
+	<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+	<script type="text/javascript" src="/js/fireworks.js"></script>
+<% } %>
+
+
+<!-- 背景雪花飘落特效 -->
+<% if (theme.sakura.enable) { %>
+	<script type="text/javascript">
+	//只在桌面版网页启用特效
+	var windowWidth = $(window).width();
+	if (windowWidth > 768) {
+		document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+	}
+	</script>
+<% } %>
+
+
+<!-- 鼠标点击文字特效 -->
+<% if (theme.wenzi.enable) { %>
+//只在桌面版网页启用特效
+	var windowWidth = $(window).width();
+	if (windowWidth > 768) {
+	<script src="/js/wenzi.js" type="text/javascript"></script>
+	}
+<% } %>
+
+
+<!-- 背景雪花飘落特效 -->
+<% if (theme.xuehuapiaoluo.enable) { %>
+	<script type="text/javascript">
+		var windowWidth = $(window).width();
+		if (windowWidth > 768) {
+			document.write('<script type="text/javascript" src="/js/xuehuapiaoluo.js"><\/script>');
+		}
+	</script>
+<% } %>
