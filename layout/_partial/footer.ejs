@@ -87,8 +87,14 @@
                 <a href="<%- url_for(theme.icp.url) %>" target="_blank"><%= theme.icp.text %></a>
             </span>
             <% } %>
+
         </div>
         <div class="col s12 m4 l4 social-link <%- socialClass %>"><%- partial('_partial/social-link') %></div>
+		<div class="col s12 m4 l4 social-link <%- socialClass %>">
+                <a id="up-yun-logo" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">
+					<img src="<%- url_for('/medias/upyun_logo.png') %>" style="vertical-align: text-bottom;max-height: 30px;" />
+				</a>
+            </div>
     </div>
 </footer>
 
